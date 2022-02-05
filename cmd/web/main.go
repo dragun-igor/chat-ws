@@ -1,12 +1,16 @@
 package main
 
 import (
+	"github.com/dragun-igor/chat-ws/internal/handlers"
 	"log"
 	"net/http"
 )
 
 func main() {
 	mux := routes()
+
+	log.Println("starting channel listener")
+	go handlers.ListenToWsChannel()
 
 	log.Println("starting web server on port 8081")
 
