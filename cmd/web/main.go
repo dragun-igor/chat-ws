@@ -8,7 +8,7 @@ import (
 func main() {
 	mux := routes()
 
-	log.Println("starting web server on port 8080")
+	log.Println("starting web server on port 8081")
 
-	_ = http.ListenAndServe(":8080", mux)
+	_ = http.ListenAndServe(":8081", mux)
 }
